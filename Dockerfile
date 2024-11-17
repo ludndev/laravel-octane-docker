@@ -12,7 +12,7 @@ RUN apk add \
     libzip-dev \
     postgresql-dev
 
-docker-php-ext-install pdo pdo_pgsql
+RUN docker-php-ext-install pdo pdo_pgsql
 
 # install and enable Swoole
 RUN pecl install swoole && docker-php-ext-enable swoole
